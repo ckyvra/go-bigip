@@ -103,6 +103,7 @@ func NewSession(host, port, user, passwd string, configOptions *ConfigOptions) *
 			TLSClientConfig: &tls.Config{
 				InsecureSkipVerify: true,
 			},
+			Proxy: http.ProxyFromEnvironment,
 		},
 		ConfigOptions: configOptions,
 	}
